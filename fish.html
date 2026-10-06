@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fish.css">
+</head>
+<body>
+     <div class="container">
+        <h1>⚡ Smart Home Electricity Calculator</h1>
+        <p>Calculate your estimated electricity consumption and cost.</p>
+
+        <div class="input-box">
+            <label>Appliance Name</label>
+            <input type="text" id="appliance" placeholder="e.g. Fan">
+
+            <label>Power (Watts)</label>
+            <input type="number" id="watts" placeholder="e.g. 75">
+
+            <label>Hours Used Per Day</label>
+            <input type="number" id="hours" placeholder="e.g. 8">
+
+            <button onclick="addAppliance()">Add Appliance</button>
+        </div>
+
+        <h2>Appliances</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Appliance</th>
+                    <th>Watts</th>
+                    <th>Hours</th>
+                    <th>Daily kWh</th>
+                </tr>
+            </thead>
+
+            <tbody id="applianceList">
+            </tbody>
+        </table>
+
+        <div class="cost-box">
+            <label>Electricity Cost per kWh (₦)</label>
+            <input type="number" id="rate" value="200">
+
+            <button onclick="calculateCost()">Calculate</button>
+
+            <h3>Daily Consumption: <span id="daily">0</span> kWh</h3>
+            <h3>Monthly Consumption: <span id="monthly">0</span> kWh</h3>
+            <h3>Estimated Daily Cost: ₦<span id="dailyCost">0</span></h3>
+            <h3>Estimated Monthly Cost: ₦<span id="monthlyCost">0</span></h3>
+        </div>
+    </div>
+
+    <script src="fish.js"></script>
+
+</body>
+</html>
